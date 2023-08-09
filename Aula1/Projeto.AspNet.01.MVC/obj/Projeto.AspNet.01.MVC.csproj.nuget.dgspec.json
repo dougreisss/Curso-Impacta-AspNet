@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_AspNet\\Aula1\\Projeto.AspNet.01.MVC\\Projeto.AspNet.01.MVC.csproj": {}
+    "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula1\\Projeto.AspNet.01.MVC\\Projeto.AspNet.01.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_AspNet\\Aula1\\Projeto.AspNet.01.MVC\\Projeto.AspNet.01.MVC.csproj": {
+    "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula1\\Projeto.AspNet.01.MVC\\Projeto.AspNet.01.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_AspNet\\Aula1\\Projeto.AspNet.01.MVC\\Projeto.AspNet.01.MVC.csproj",
+        "projectUniqueName": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula1\\Projeto.AspNet.01.MVC\\Projeto.AspNet.01.MVC.csproj",
         "projectName": "Projeto.AspNet.01.MVC",
-        "projectPath": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_AspNet\\Aula1\\Projeto.AspNet.01.MVC\\Projeto.AspNet.01.MVC.csproj",
+        "projectPath": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula1\\Projeto.AspNet.01.MVC\\Projeto.AspNet.01.MVC.csproj",
         "packagesPath": "C:\\Users\\Dougl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_AspNet\\Aula1\\Projeto.AspNet.01.MVC\\obj\\",
+        "outputPath": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula1\\Projeto.AspNet.01.MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
