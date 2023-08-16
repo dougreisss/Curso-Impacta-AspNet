@@ -1,0 +1,66 @@
+﻿@*
+    esta view se "comunicará" com a action Create() - estabelecida no controller no ColabController()
+
+*@
+
+@*
+    fazer referencia a partir da view - ao model
+*@
+
+@model Colab
+
+@* definir o nome da view *@
+
+@{
+    ViewData["Title"] = "Criar Registro";
+}
+
+@*
+    abaixo serão implementadas algumas instruções importantes: 
+    definir uma estrutura HTML para a criação de um formulario
+    "linkar" as actions Create e Index
+*@
+
+<a asp-action="Index">Listar Registros</a>
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <p>
+        <label asp-for="Nome">Nome</label>
+        <input asp-for="Nome"/>
+        <span></span>
+    </p>
+
+    <p>
+        <label asp-for="Idade">Idade</label>
+        <input asp-for="Idade" />
+        <span></span>
+    </p>
+
+    <p>
+        <label asp-for="Salario">Salario</label>
+        <input asp-for="Salario"/>
+        <span></span>
+    </p>
+
+    <p>
+        <label asp-for="Departamento">Departamento</label>
+        <select asp-for="Departamento">
+            <option value="Dev">Dev</option>
+            <option value="RH">RH</option>
+            <option value="Financeiro">Financeiro</option>
+        </select>
+    </p>
+
+    <p>
+        <label asp-for="Genero">Genero</label>
+        <input type="radio" asp-for="Genero" value="F"/> Feminino
+        <input type="radio" asp-for="Genero" value="M"/> Masculino
+        <input type="radio" asp-for="Genero" value="O"/> Outros
+    </p>
+
+    <p>
+        <button type="submit">Cadastrar</button>
+    </p>
+</form>

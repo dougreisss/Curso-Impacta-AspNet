@@ -1,6 +1,6 @@
 ﻿namespace Projeto.AspNet._03.MVC.CRUD.Models
 {
-    public class Repository
+    public static class Repository
     {
         private static List<Colab> _todosOsColabs = new List<Colab>();
         public static IEnumerable<Colab> TodosOsColabs 

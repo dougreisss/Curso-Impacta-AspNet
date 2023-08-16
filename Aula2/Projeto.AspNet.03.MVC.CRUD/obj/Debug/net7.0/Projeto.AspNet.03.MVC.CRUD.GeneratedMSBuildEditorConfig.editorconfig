@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Dougl\OneDrive\Documentos\Curso_Aspnet_Core\Curso-Impacta-AspNet\Aula2\Projeto.AspNet.03.MVC.CRUD
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula2/Projeto.AspNet.03.MVC.CRUD/Views/Colab/Agradecimento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sYWJcQWdyYWRlY2ltZW50by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula2/Projeto.AspNet.03.MVC.CRUD/Views/Colab/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sYWJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula2/Projeto.AspNet.03.MVC.CRUD/Views/Colab/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sYWJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula2/Projeto.AspNet.03.MVC.CRUD/Views/Colab/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sYWJcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula2/Projeto.AspNet.03.MVC.CRUD/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,17 @@
+﻿@*
+    estabelecer a "comunicacao" entre a view e o model
+*@
+
+@model Colab
+
+@{
+    ViewData["Title"] = "Registro inserido";
+}
+
+@* construir a estrutura HTML necessaria  *@
+
+<a asp-action="Index">Listar Registros</a>
+
+<h2>@ViewData["Title"]</h2>
+
+<h2>Bridagão, @Model.Nome, @Model.Idade</h2>
