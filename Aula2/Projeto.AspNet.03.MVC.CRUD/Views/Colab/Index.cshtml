@@ -13,11 +13,9 @@
 
 @* criar a estrutura html necessaria *@
 
-<a asp-action="Create">Criar Registro</a>
-
 <h2>@ViewData["Title"]</h2>
 
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>Nome</th>
@@ -39,8 +37,8 @@
                 <td>@registro.Departamento</td>
                 <td>@registro.Genero</td>
                 <td>
-                    <button>
-                        <a asp-action="Update"
+                    <button class="btn btn-primary">
+                        <a style="text-decoration: none; color: white;" asp-action="Update"
                            asp-route-Identificador="@registro.Nome">
                             Atualizar
                         </a>
@@ -48,7 +46,7 @@
                 </td>
                 <td>
                     <form asp-action="Delete" asp-route-Identificador="@registro.Nome" method="post">
-                        <button type="submit">Excluir</button>
+                        <button type="submit" class="btn btn-danger">Excluir</button>
                     </form>
                 </td>
             </tr>
