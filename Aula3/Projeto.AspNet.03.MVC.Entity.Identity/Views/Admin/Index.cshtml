@@ -1,0 +1,58 @@
+﻿@*
+
+*@
+
+@model IEnumerable<AppUser> 
+
+@{
+    ViewData["Title"] = "Listar Registros";
+}
+
+<h3 class="bg-info text-white">@ViewData["Title"]</h3>
+
+<a asp-action="Create" class="btn btn-secondary">Criar registro</a>
+
+<table class="table table-sm table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Alterar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (AppUser registro in Model)
+        {
+            <tr>
+                <td>@registro.Id</td>
+                <td>@registro.UserName</td>
+                <td>@registro.Email</td>
+                <td>
+                    <a
+                        class="btn btn-sm btn-primary"
+                        asp-action="Update"
+                        asp-route-idRegistro="@registro.Id"
+                    >
+                        Atual./Alter    
+                    </a>
+                </td>
+                <td>
+                    <form
+                        method="post"
+                        asp-action="Delete"
+                        asp-route-idRegistro="@registro.Id"
+                    >
+                        <button 
+                            type="submit"
+                            class="btn btn-sm btn-danger"
+                        >
+                            Excluir
+                        </button>
+                    </form>
+                </td>
+            </tr>    
+        }
+    </tbody>
+</table>
