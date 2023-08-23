@@ -111,5 +111,89 @@ namespace Projeto.AspNet._03.MVC.Entity.Identity.Controllers
 
             return View(registro);
         }
+
+       
+
+        // 3º OP Crud - Update: será responsavel pela reinserção de dados na base - desde que esteja devidamente armazenado e identificado na base
+
+        // definição da action Update - é necessario que o registro atual seja disponibilizado para operação de alteração/autualizado.
+        // de forma explicita a action será definida como uma tarefa assincrona. 
+
+        public async Task<IActionResult> Update(string idRegistro)
+        {
+            // definir uma consulta - à base - para a obtenção de um registro para atualização/alteração. 
+            // Para este proposito será uma prop para receber como valor a consulta que o registro
+
+            AppUser buscaUser = await _userManager.FindByIdAsync(idRegistro);
+
+            // avaliar o resultado da busca e verificar se o registro, realmente, existe
+
+            if (buscaUser != null) 
+            {
+                return View("Update", buscaUser);
+            }
+            else
+            {
+                return View("Index");
+            }
+        }
+
+        // ...continuando a 3º OP: sobrecarga da action/método Update para que seja, agora possivel alterar/atualizar e reenviar os dados para a base
+        [HttpPost] // auxilia no envio de dados de uma "localidade" para outra
+        public async Task<IActionResult> Update(string idRegistro, string email, string password)
+        {
+            // repetir a consulta a base - aqui, será observado se o registro que está disponivel é, realmente, ele quem está sendo alterado. 
+            AppUser buscaUser = await _userManager.FindByIdAsync(idRegistro);
+
+            // agora, é necessario lidar com as props e seus valores para serem alterados e, posteriomente, reenviados a base
+
+            if (buscaUser != null) // neste passo - com a avaliação considerada TRUE - a variavel trouxe um resultado. Este resultado nada mais é do que o conjunto de dados.
+                // A partir deste momento, o conjunto será "particionado" e observado/manipulado "pedaço-a-pedaço"
+            {
+
+                if (!string.IsNullOrEmpty(email)) // aqui, a prop email é um parametro do metodo IsNullOrEmpty
+                    buscaUser.Email = email;
+                else
+                    ModelState.AddModelError("", "O campo email, não pode ser vazio!");
+
+                if (!string.IsNullOrEmpty(password))
+                    buscaUser.PasswordHash = _passwordHasher.HashPassword(buscaUser, password);
+                else
+                    ModelState.AddModelError("", "O campo senha/password não pode ser vazio!");
+                
+                if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
+                {
+                    IdentityResult resultadoOp = await _userManager.UpdateAsync(buscaUser);
+
+                    if (resultadoOp.Succeeded) 
+                    {
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        Erros(resultadoOp);
+                        return View(buscaUser);
+                    }
+                }
+            } 
+            else 
+            {
+                ModelState.AddModelError("", "Usuario nao encontrado");
+
+                return View(buscaUser);
+            }
+            
+            return View(buscaUser);
+        }
+
+        private void Erros(IdentityResult ocorrenciasErros)
+        {
+            foreach (IdentityError erro in ocorrenciasErros.Errors)
+            {
+                ModelState.AddModelError("", erro.Description);
+            }
+        }
+
+
     }
 }
