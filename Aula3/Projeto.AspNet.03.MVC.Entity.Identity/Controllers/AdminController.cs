@@ -140,7 +140,7 @@ namespace Projeto.AspNet._03.MVC.Entity.Identity.Controllers
 
         // ...continuando a 3º OP: sobrecarga da action/método Update para que seja, agora possivel alterar/atualizar e reenviar os dados para a base
         [HttpPost] // auxilia no envio de dados de uma "localidade" para outra
-        public async Task<IActionResult> Update(string id, string email, string password)
+        public async Task<IActionResult> Update(string id, string email, string password, string userName)
         {
             // repetir a consulta a base - aqui, será observado se o registro que está disponivel é, realmente, ele quem está sendo alterado. 
             AppUser buscaUser = await _userManager.FindByIdAsync(id);
@@ -160,8 +160,13 @@ namespace Projeto.AspNet._03.MVC.Entity.Identity.Controllers
                     buscaUser.PasswordHash = _passwordHasher.HashPassword(buscaUser, password);
                 else
                     ModelState.AddModelError("", "O campo senha/password não pode ser vazio!");
+
+                if (!string.IsNullOrEmpty(userName))
+                    buscaUser.UserName = userName;
+                else
+                    ModelState.AddModelError("", "O campo nome, não pode ser vazio!");
                 
-                if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
+                if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(userName))
                 {
                     IdentityResult resultadoOp = await _userManager.UpdateAsync(buscaUser);
 
