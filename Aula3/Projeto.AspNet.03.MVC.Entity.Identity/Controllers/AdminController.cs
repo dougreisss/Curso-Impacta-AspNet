@@ -119,12 +119,12 @@ namespace Projeto.AspNet._03.MVC.Entity.Identity.Controllers
         // definição da action Update - é necessario que o registro atual seja disponibilizado para operação de alteração/autualizado.
         // de forma explicita a action será definida como uma tarefa assincrona. 
 
-        public async Task<IActionResult> Update(string idRegistro)
+        public async Task<IActionResult> Update(string id)
         {
             // definir uma consulta - à base - para a obtenção de um registro para atualização/alteração. 
             // Para este proposito será uma prop para receber como valor a consulta que o registro
 
-            AppUser buscaUser = await _userManager.FindByIdAsync(idRegistro);
+            AppUser buscaUser = await _userManager.FindByIdAsync(id);
 
             // avaliar o resultado da busca e verificar se o registro, realmente, existe
 
@@ -140,10 +140,10 @@ namespace Projeto.AspNet._03.MVC.Entity.Identity.Controllers
 
         // ...continuando a 3º OP: sobrecarga da action/método Update para que seja, agora possivel alterar/atualizar e reenviar os dados para a base
         [HttpPost] // auxilia no envio de dados de uma "localidade" para outra
-        public async Task<IActionResult> Update(string idRegistro, string email, string password)
+        public async Task<IActionResult> Update(string id, string email, string password)
         {
             // repetir a consulta a base - aqui, será observado se o registro que está disponivel é, realmente, ele quem está sendo alterado. 
-            AppUser buscaUser = await _userManager.FindByIdAsync(idRegistro);
+            AppUser buscaUser = await _userManager.FindByIdAsync(id);
 
             // agora, é necessario lidar com as props e seus valores para serem alterados e, posteriomente, reenviados a base
 
@@ -194,6 +194,35 @@ namespace Projeto.AspNet._03.MVC.Entity.Identity.Controllers
             }
         }
 
+        // 4º OP Crud - Delete: será responsavel pela exclusão de dados na base - desde que esteja devidamente armazenado e identificado
+        [HttpPost]
+        public async Task<IActionResult> Delete(string id)
+        {
+            // definir uma prop para buscar o registro na base
+            AppUser buscaUser = await _userManager.FindByIdAsync(id);
+
+            // verificar o resultado da busca
+
+            if (buscaUser != null) 
+            {
+                IdentityResult resultadoExc = await _userManager.DeleteAsync(buscaUser);
+
+                if (resultadoExc.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    Erros(resultadoExc);
+                }
+            } 
+            else
+            {
+                ModelState.AddModelError("", "Usuario não foi encontrado");
+            } 
+
+            return View("Index", _userManager.Users);
+        }
 
     }
 }

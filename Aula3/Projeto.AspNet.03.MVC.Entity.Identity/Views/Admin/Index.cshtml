@@ -33,7 +33,7 @@
                     <a
                         class="btn btn-sm btn-primary"
                         asp-action="Update"
-                       asp-route-idRegistro="@registro.Id">
+                       asp-route-id="@registro.Id">
                         Atual./Alter    
                     </a>
                 </td>
@@ -41,7 +41,7 @@
                     <form
                         method="post"
                         asp-action="Delete"
-                          asp-route-idRegistro="@registro.Id">
+                          asp-route-id="@registro.Id">
                         <button 
                             type="submit"
                             class="btn btn-sm btn-danger"
