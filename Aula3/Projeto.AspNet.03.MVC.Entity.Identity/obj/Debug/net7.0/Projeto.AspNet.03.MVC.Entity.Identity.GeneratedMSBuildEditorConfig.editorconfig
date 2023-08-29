@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Dougl\OneDrive\Documentos\Curso_Aspnet_Core\Curso-Impacta-AspNet\Aula3\Projeto.AspNet.03.MVC.Entity.Identity
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula3/Projeto.AspNet.03.MVC.Entity.Identity/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula3/Projeto.AspNet.03.MVC.Entity.Identity/Views/Admin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula3/Projeto.AspNet.03.MVC.Entity.Identity/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula3/Projeto.AspNet.03.MVC.Entity.Identity/Views/Home/Private.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula3/Projeto.AspNet.03.MVC.Entity.Identity/Views/Shared/Error.cshtml]
