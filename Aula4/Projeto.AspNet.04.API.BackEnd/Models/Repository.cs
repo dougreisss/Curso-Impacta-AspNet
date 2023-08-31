@@ -60,15 +60,7 @@ namespace Projeto.AspNet._04.API.BackEnd.Models
 
             return registroReserva;
         }
-
-        public void DeleteReserva(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Reserva UpdateReserva(Reserva registroAtualizado)
-        {
-            throw new NotImplementedException();
-        }
+        public Reserva UpdateReserva(Reserva registroAtualizado) => AddReserva(registroAtualizado);
+        public void DeleteReserva(int id) => _registro.Remove(id);
     }
 }
