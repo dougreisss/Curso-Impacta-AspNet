@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Lista de reservas";
+}
+
+@model IEnumerable<Reserva>
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+<h2>@ViewData["Title"]</h2>
+
+<a asp-action="AddReserva" class="btn btn-sm btn-primary">
+    Adicionar
+</a>
+
+<a asp-action="GetReserva" class="btn btn-sm btn-primary">
+    Detalhes Reserva
+</a>
+
+<table class="table table-sm table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Local de partida</th>
+            <th>Local de chegada</th>
+            <th>Atualizar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var registro in Model) 
+        {
+            <tr>
+                <td>@registro.Id</td>
+                <td>@registro.Nome</td>
+                <td>@registro.Sobrenome</td>
+                <td>@registro.PontoA</td>
+                <td>@registro.PontoB</td>
+                <td>
+                    <a
+                        asp-action="UpdateReserva"
+                        asp-route-idRegistro="@registro.Id"
+                        >Atualizar</a>
+                </td>
+                <td>
+                    <form 
+                        method="post" 
+                        asp-action="DeleteReserva"
+                        >
+                        <input type="hidden" value="@registro.Id" name="IdReserva"/>
+                        <button type="submit">Excluir</button>
+                    </form>
+                </td>
+            </tr>    
+        }
+    </tbody>
+</table>
