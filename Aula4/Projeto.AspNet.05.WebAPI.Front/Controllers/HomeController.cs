@@ -3,6 +3,7 @@ using Projeto.AspNet._05.WebAPI.Front.Models;
 using System.Diagnostics;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Projeto.AspNet._05.WebAPI.Front.Controllers
 {
@@ -54,5 +55,50 @@ namespace Projeto.AspNet._05.WebAPI.Front.Controllers
 
             return View(reserva);
        }
+
+       public ViewResult AddReserva() => View();
+
+       [HttpPost]
+       public async Task<IActionResult> AddReserva(Reserva insercaoRegistro)
+       {
+            var urlAPI = "http://localhost:2033/api/Reservas";
+
+            Reserva reservaRecebida = new Reserva();
+
+            using (var reqHttp = new HttpClient())
+            {
+                StringContent conteudo = new StringContent(JsonConvert.SerializeObject(insercaoRegistro), Encoding.UTF8, "application/json");
+
+                using (var requisicao = await reqHttp.PostAsync(urlAPI, conteudo))
+                {
+                    string apiResposta = await requisicao.Content.ReadAsStringAsync();
+
+                    reservaRecebida = JsonConvert.DeserializeObject<Reserva>(apiResposta);
+                }
+            }
+
+            return View(reservaRecebida);
+       }
+
+       public async Task<IActionResult> UpdateReserva(int id)
+       {
+            var urlAPI = "http://localhost:2033/api/Reservas";
+
+            Reserva dadosObitidosBase = new Reserva();
+
+            using (var reqHttp = new HttpClient()) 
+            {
+                using (var requisicao = await reqHttp.GetAsync($"{urlAPI}/{id}"))
+                {
+                    string apiResposta = await requisicao.Content.ReadAsStringAsync();
+
+                    dadosObitidosBase = JsonConvert.DeserializeObject<Reserva>(apiResposta);
+                }
+            }
+
+            return View(dadosObitidosBase);
+       }
+
+
     }
 }

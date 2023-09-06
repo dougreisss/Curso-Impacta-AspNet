@@ -18,7 +18,7 @@ namespace Projeto.AspNet._04.API.BackEnd.Models
                     Nome = "Bruno",
                     Sobrenome = "Mano",
                     PontoA = "São Paulo - Zona Norte",
-                    PontoB = "Berlim - Alemnha"
+                    PontoB = "Berlim - Alemanha"
                 }, 
                 new Reserva 
                 {
@@ -26,7 +26,7 @@ namespace Projeto.AspNet._04.API.BackEnd.Models
                     Nome = "Douglas",
                     Sobrenome = "Reis",
                     PontoA = "Santos",
-                    PontoB = "Berlim - Alemnha"
+                    PontoB = "Berlim - Alemanha"
                 }, 
                 new Reserva 
                 {

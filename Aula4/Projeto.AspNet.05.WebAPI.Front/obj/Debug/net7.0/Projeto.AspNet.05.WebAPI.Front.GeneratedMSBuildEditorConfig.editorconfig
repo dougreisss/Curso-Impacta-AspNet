@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Dougl\OneDrive\Documentos\Curso_Aspnet_Core\Curso-Impacta-AspNet\Aula4\Projeto.AspNet.05.WebAPI.Front
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula4/Projeto.AspNet.05.WebAPI.Front/Views/Home/AddReserva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRSZXNlcnZhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula4/Projeto.AspNet.05.WebAPI.Front/Views/Home/GetReserva.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRSZXNlcnZhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula4/Projeto.AspNet.05.WebAPI.Front/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula4/Projeto.AspNet.05.WebAPI.Front/Views/Home/UpdateReserva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcGRhdGVSZXNlcnZhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Dougl/OneDrive/Documentos/Curso_Aspnet_Core/Curso-Impacta-AspNet/Aula4/Projeto.AspNet.05.WebAPI.Front/Views/Shared/Error.cshtml]

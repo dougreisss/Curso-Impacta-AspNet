@@ -1,5 +1,55 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
+@model Reserva
+
 @{
+    ViewData["Tilte"] = "Registro por id";
 }
+
+<a asp-action="Index" class="btn btn-sm btn-primary">Lista de dados</a>
+
+<h2>
+    @ViewData["Title"]
+</h2>
+
+<h3>@ViewBag.StatusCode</h3>
+
+<form method="post">
+    <div class="form-group">
+        <label for="id">Id:</label>
+        <input name="id" class="form-control"/>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-sm btn-primary">Obter reserva</button>
+    </div>
+</form>
+
+<h2></h2>
+
+@if (Model != null)
+{
+    <table class="table table-sm table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Local de partida</th>
+                <th>Local de chegada</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Nome</td>
+                <td>@Model.Sobrenome</td>
+                <td>@Model.PontoA</td>
+                <td>@Model.PontoB</td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+
