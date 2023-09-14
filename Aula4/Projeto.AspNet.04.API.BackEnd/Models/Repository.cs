@@ -18,7 +18,10 @@ namespace Projeto.AspNet._04.API.BackEnd.Models
                     Nome = "Bruno",
                     Sobrenome = "Mano",
                     PontoA = "São Paulo - Zona Norte",
-                    PontoB = "Berlim - Alemanha"
+                    PontoB = "Berlim - Alemanha",
+                    Endereco = "Rua 1",
+                    CheckIn = DateTime.Now,
+                    CheckOut = DateTime.Now,
                 }, 
                 new Reserva 
                 {
@@ -26,7 +29,10 @@ namespace Projeto.AspNet._04.API.BackEnd.Models
                     Nome = "Douglas",
                     Sobrenome = "Reis",
                     PontoA = "Santos",
-                    PontoB = "Berlim - Alemanha"
+                    PontoB = "Berlim - Alemanha",
+                    Endereco = "Rua 2",
+                    CheckIn = DateTime.Now,
+                    CheckOut = DateTime.Now,
                 }, 
                 new Reserva 
                 {
@@ -34,7 +40,10 @@ namespace Projeto.AspNet._04.API.BackEnd.Models
                     Nome = "Gabriela",
                     Sobrenome = "Alcaide",
                     PontoA = "Guarulhos - SP",
-                    PontoB = "Lisboa - Portugal"
+                    PontoB = "Lisboa - Portugal",
+                    Endereco = "Rua 3",
+                    CheckIn = DateTime.Now,
+                    CheckOut = DateTime.Now,
                 }
             }.ForEach(res => AddReserva(res));
         }

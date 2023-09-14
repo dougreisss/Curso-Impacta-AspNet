@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Projeto.AspNet.05.WebAPI.Front.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\wwwroot\\botao-atualizar.png",
+      "PackagePath": "staticwebassets\\botao-atualizar.png"
+    },
+    {
       "Id": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -243,6 +247,10 @@
     {
       "Id": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\wwwroot\\lixo.png",
+      "PackagePath": "staticwebassets\\lixo.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Projeto.AspNet.05.WebAPI.Front.Microsoft.AspNetCore.StaticWebAssets.props",

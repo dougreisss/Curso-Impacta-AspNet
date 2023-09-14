@@ -34,6 +34,9 @@ namespace Projeto.AspNet._04.API.BackEnd.Controllers
                 Sobrenome = reserva.Sobrenome,
                 PontoA = reserva.PontoA,
                 PontoB = reserva.PontoB,
+                Endereco = reserva.Endereco,
+                CheckIn = reserva.CheckIn,
+                CheckOut = reserva.CheckOut,
         });
 
         [HttpPut] // atributo de requisição responsavel por posibilitar a alteração/atualização de registro

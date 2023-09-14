@@ -99,6 +99,56 @@ namespace Projeto.AspNet._05.WebAPI.Front.Controllers
             return View(dadosObitidosBase);
        }
 
+        [HttpPost]
+
+        public async Task<IActionResult> UpdateReserva(Reserva reserva)
+        {
+            var urlAPI = "http://localhost:2033/api/Reservas";
+
+            Reserva reservaAtualizada = new Reserva();
+
+            using (var reqHttp = new HttpClient())
+            {
+                var alterandoDados = new MultipartFormDataContent();
+
+                alterandoDados.Add(new StringContent(reserva.Id.ToString()), "Id");
+                alterandoDados.Add(new StringContent(reserva.Nome), "Nome");
+                alterandoDados.Add(new StringContent(reserva.Sobrenome), "Sobrenome");
+                alterandoDados.Add(new StringContent(reserva.PontoA), "PontoA");
+                alterandoDados.Add(new StringContent(reserva.PontoB), "PontoB");
+                alterandoDados.Add(new StringContent(reserva.Endereco), "Endereco");
+                alterandoDados.Add(new StringContent(reserva.CheckIn.ToString()), "CheckIn");
+                alterandoDados.Add(new StringContent(reserva.CheckOut.ToString()), "CheckOut");
+
+                using (var requisicao = await reqHttp.PutAsync(urlAPI, alterandoDados))
+                {
+                    string apiResposta = await requisicao.Content.ReadAsStringAsync();
+
+                    ViewBag.Result = "Success";
+
+                    reservaAtualizada = JsonConvert.DeserializeObject<Reserva>(apiResposta);
+                }
+            }
+
+            return View(reservaAtualizada);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteReserva(int IdReserva)
+        {
+            var urlAPI = "http://localhost:2033/api/Reservas";
+
+            using (var reqHttp = new HttpClient())
+            {
+                using (var requisicao = await reqHttp.DeleteAsync($"{urlAPI}/{IdReserva}"))
+                {
+                    string apiResposta = await requisicao.Content.ReadAsStringAsync();
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
+
 
     }
 }

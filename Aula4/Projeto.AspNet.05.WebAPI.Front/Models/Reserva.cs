@@ -7,5 +7,8 @@
         public string? Sobrenome { get; set; }
         public string? PontoA { get; set; }
         public string? PontoB { get; set; }
+        public string? Endereco { get; set; }
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
     }
 }

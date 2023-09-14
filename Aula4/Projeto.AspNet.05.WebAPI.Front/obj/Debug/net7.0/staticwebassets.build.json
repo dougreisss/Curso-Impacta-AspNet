@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d5zcJBdMZjqvYDdAAagm8DaUodq0yEhBZGzh7ohZJxE=",
+  "Hash": "x2JqR7hw/mX90O0ik46PPBErLP72UzNnm8o3C9bcQZc=",
   "Source": "Projeto.AspNet.05.WebAPI.Front",
   "BasePath": "_content/Projeto.AspNet.05.WebAPI.Front",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Projeto.AspNet.05.WebAPI.Front.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\wwwroot\\botao-atualizar.png",
+      "SourceId": "Projeto.AspNet.05.WebAPI.Front",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\wwwroot\\",
+      "BasePath": "_content/Projeto.AspNet.05.WebAPI.Front",
+      "RelativePath": "botao-atualizar.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\botao-atualizar.png"
     },
     {
       "Identity": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\wwwroot\\css\\site.css",
@@ -1069,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\wwwroot\\lixo.png",
+      "SourceId": "Projeto.AspNet.05.WebAPI.Front",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Dougl\\OneDrive\\Documentos\\Curso_Aspnet_Core\\Curso-Impacta-AspNet\\Aula4\\Projeto.AspNet.05.WebAPI.Front\\wwwroot\\",
+      "BasePath": "_content/Projeto.AspNet.05.WebAPI.Front",
+      "RelativePath": "lixo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lixo.png"
     }
   ]
 }
