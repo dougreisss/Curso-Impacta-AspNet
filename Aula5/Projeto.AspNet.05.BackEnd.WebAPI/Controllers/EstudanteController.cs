@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Projeto.AspNet._05.BackEnd.WebAPI.Controllers.Data.Entity;
 using Projeto.AspNet._05.BackEnd.WebAPI.Controllers.Data.MeuDbContext;
 
 namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers
@@ -37,6 +38,64 @@ namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers
             }
 
             return Ok(estudanteUnico);
+        }
+
+        [HttpPost]
+        [Route("AddRegister")]
+        public async Task<ActionResult> Post(Estudante registro)
+        {
+            _dbContext.Estudante.Add(registro);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(registro);
+        }
+
+        [HttpPut]
+        [Route("UpRegister/{id}")]
+        public async Task<ActionResult> PutRegister([FromRoute]int id, Estudante novoRegistro)
+        {
+            var buscandoEstudante = await _dbContext.Estudante.FindAsync(id);
+
+            if (buscandoEstudante is null)
+            {
+                return NotFound();
+            }
+
+            buscandoEstudante.Estudante_Nome = novoRegistro.Estudante_Nome;
+
+            buscandoEstudante.Estudante_Sobrenome = novoRegistro.Estudante_Sobrenome;
+
+            buscandoEstudante.Estudante_Estudante_RA = novoRegistro.Estudante_Estudante_RA;
+
+            buscandoEstudante.Estudante_Email = novoRegistro.Estudante_Email;
+
+            buscandoEstudante.Estudante_Idade = novoRegistro.Estudante_Idade;
+
+            buscandoEstudante.Estudante_Fone = novoRegistro.Estudante_Fone;
+
+            buscandoEstudante.Estudante_Genero = novoRegistro.Estudante_Genero;
+
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(buscandoEstudante);
+        }
+
+        [HttpDelete]
+        [Route("delRegister/{id}")]
+
+        public async Task<ActionResult> Delete(int id)
+        {
+            var excluirRegistro = await _dbContext.Estudante.FindAsync(id);
+
+            if (excluirRegistro is null) 
+            {
+                return NotFound();
+            }
+
+            _dbContext.Estudante.Remove(excluirRegistro);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok();
         }
     }
 }
