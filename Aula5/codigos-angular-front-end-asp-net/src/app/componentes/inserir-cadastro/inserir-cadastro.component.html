@@ -1,0 +1,27 @@
+<div class = "container">
+    <div class = "col-md-12">
+        <h3>{{ tituloComp }}</h3>
+        <!-- definição do fomulario "informal"-->
+        <div class = "form-group">
+            <input type = "text" [(ngModel)] = "cadastroInserido.nome" placeholder = "Informe seu nome" class = "form-control" />
+        </div>
+
+        <div class = "form-group">
+            <input type = "number" [(ngModel)] = "cadastroInserido.idade" placeholder = "Informe sua idade" class = "form-control" />
+        </div>
+
+        <div class = "form-group">
+            <input type = "text" [(ngModel)] = "cadastroInserido.genero" placeholder = "Informe o genero" class = "form-control" />
+        </div>
+
+        <div class = "form-group">
+            <input type = "text" [(ngModel)] = "cadastroInserido.inscricaoCurso" placeholder = "Informe em qual curso esta inscrito" class = "form-control" />
+        </div>
+
+        <div class = "form-group">
+            <button class = "btn btn-success btn-lg panel-body" (click) =  inserirUmCadastro()>
+                Inserir Cadastro
+            </button>
+        </div>
+    </div>
+</div>

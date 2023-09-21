@@ -1,0 +1,62 @@
+<!-- implementar a view do componente em dois "pedaços": o 1º será exibido se existir algum dado trazido da base; o 2º será exibido se, e somente se, não existir qualquer registro trazido da base-->
+<div class="container">
+    <div class="col-md-12">
+        <h3>{{ tituloComp }}</h3>
+        <div *ngIf="listaDeEstudantes != 0; else vazioDeDados">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Id Estudante</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Sobrenome</th>
+                        <th scope="col">RA</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Idade</th>
+                        <th scope="col">Fone</th>
+                        <th scope="col">Genero</th>
+                        <th scope="col">Ação a Executar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr scope="row" *ngFor="let itens of listaDeEstudantes">
+                        <td>{{ itens.estudante_Id }}</td>
+                        <td>{{ itens.estudante_Nome }}</td>
+                        <td>{{ itens.estudante_Sobrenome }}</td>
+                        <td>{{ itens.estudante_RA}}</td>
+                        <td>{{ itens.estudante_Email }}</td>
+                        <td>{{ itens.estudante_Idade }}</td>
+                        <td>{{ itens.estudante_Fone }}</td>
+                        <td>{{ itens.estudante_Genero }}</td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm"
+                                routerLink="/atualizar/{{ itens.estudante_Id }}">
+                                Atualizar
+                            </button>
+
+                            <button class="btn btn-outline-secondary btn-sm"
+                                routerLink="/detalhe/{{ itens.estudante_Id }}">
+                                Detalhes
+                            </button>
+
+                            <button class="btn btn-outline-danger btn-sm"
+                                (click)="excluirCadastroEstudante(itens.estudante_Id)">
+                                Excluir
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <ng-template #vazioDeDados>
+        <div class="sem-dados">
+            <p>
+                Cadastros não encontrados! Por favor, insira ao menos um.
+            </p>
+        </div>
+        <button class="btn btn-outline-primary" routerLink="/inserir">
+            Inserir Cadastro
+        </button>
+    </ng-template>
+</div>

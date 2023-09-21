@@ -65,7 +65,7 @@ namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers
 
             buscandoEstudante.Estudante_Sobrenome = novoRegistro.Estudante_Sobrenome;
 
-            buscandoEstudante.Estudante_Estudante_RA = novoRegistro.Estudante_Estudante_RA;
+            buscandoEstudante.Estudante_RA = novoRegistro.Estudante_RA;
 
             buscandoEstudante.Estudante_Email = novoRegistro.Estudante_Email;
 

@@ -3,8 +3,9 @@
     "",
     "\\Controllers",
     "\\Controllers\\Data",
+    "\\Controllers\\Data\\Entity",
     "\\Controllers\\Data\\MeuDbContext"
   ],
-  "SelectedNode": "\\Projeto.AspNet.05.BackEnd.WebAPI.sln",
+  "SelectedNode": "\\Controllers\\EstudanteController.cs",
   "PreviewInSolutionExplorer": false
 }
