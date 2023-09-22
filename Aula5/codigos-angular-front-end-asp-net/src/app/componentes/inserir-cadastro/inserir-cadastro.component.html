@@ -1,25 +1,39 @@
-<div class = "container">
-    <div class = "col-md-12">
+<div class="container">
+    <div class="col-md-12">
         <h3>{{ tituloComp }}</h3>
         <!-- definição do fomulario "informal"-->
-        <div class = "form-group">
-            <input type = "text" [(ngModel)] = "cadastroInserido.nome" placeholder = "Informe seu nome" class = "form-control" />
+        <div class="form-group">
+            <input type="text" [(ngModel)]="cadastroInserido.estudante_nome" placeholder="Informe seu nome"
+                class="form-control" />
         </div>
 
-        <div class = "form-group">
-            <input type = "number" [(ngModel)] = "cadastroInserido.idade" placeholder = "Informe sua idade" class = "form-control" />
+        <div class="form-group">
+            <input type="text" [(ngModel)]="cadastroInserido.estudante_sobrenome" placeholder="Informe seu sobrenome"
+                class="form-control" />
         </div>
 
-        <div class = "form-group">
-            <input type = "text" [(ngModel)] = "cadastroInserido.genero" placeholder = "Informe o genero" class = "form-control" />
+        <div class="form-group">
+            <input type="number" [(ngModel)]="cadastroInserido.estudante_ra" placeholder="Informe o ra"
+                class="form-control" />
         </div>
 
-        <div class = "form-group">
-            <input type = "text" [(ngModel)] = "cadastroInserido.inscricaoCurso" placeholder = "Informe em qual curso esta inscrito" class = "form-control" />
+        <div class="form-group">
+            <input type="number" [(ngModel)]="cadastroInserido.estudante_idade" placeholder="Informe a sua idade"
+                class="form-control" />
         </div>
 
-        <div class = "form-group">
-            <button class = "btn btn-success btn-lg panel-body" (click) =  inserirUmCadastro()>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="cadastroInserido.estudante_fone" placeholder="Informe seu telefone"
+                class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="cadastroInserido.estudante_genero" placeholder="Informe seu genero"
+                class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success btn-lg panel-body" (click)=inserirUmCadastro()>
                 Inserir Cadastro
             </button>
         </div>

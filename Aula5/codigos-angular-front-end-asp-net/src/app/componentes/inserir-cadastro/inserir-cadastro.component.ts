@@ -17,11 +17,11 @@ export class InserirCadastroComponent {
   @Input() cadastroInserido = {
     estudante_nome: '',
     estudante_sobrenome: '',
-    estudante_RA: 0,
-    estudante_Email: '',
-    estudante_Idade: 0,
-    estudante_Fone: '',
-    Estudante_Genero: '',
+    estudante_ra: 0,
+    estudante_email: '',
+    estudante_idade: 0,
+    estudante_fone: '',
+    estudante_genero: '',
   }
 
   // 3º passo: definir as referencias de instancia das classes EstudanteApiService e Router

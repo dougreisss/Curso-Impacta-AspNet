@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { EstudanteApiService } from '../../service/estudante-api.service';
 
 // importar o ActivatedRoute
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detalhe-cadastro',
@@ -22,8 +22,9 @@ export class DetalheCadastroComponent implements OnInit {
   // 2º passo: praticar a referencia de instancia das classes de recurso
   constructor(
     private estudApi: EstudanteApiService,
+    private roteador: Router,
     private copiandoRota: ActivatedRoute
-  ){}
+  ) { }
 
   // 3º passo: fazer a "cópia" da rota pelo qual os dados circularão
   rotaCopiada: any = this.copiandoRota.snapshot.params['id']
@@ -34,10 +35,21 @@ export class DetalheCadastroComponent implements OnInit {
   }
 
   // 5º passo: criar um método/função para acessar o service que possui a tarefa assincrona que recupera um unico registro da base
-  acessandoUmCadastro(): void{
+  acessandoUmCadastro(): void {
     // chamar a injeção de dependencia e, dessa forma, acessar a requisição assincrona e executa-la
-    this.estudApi.recUmRegistro(this.rotaCopiada).subscribe((dadosChegaram:{}) =>{
+    this.estudApi.recUmRegistro(this.rotaCopiada).subscribe((dadosChegaram: {}) => {
       this.cadastroUnico = dadosChegaram
     })
+  }
+
+  // 6º passo: consiste e criar um método/função para acessar o service e chamar à execução a requisição assincrona de exclusão de cadastro
+  excluirCadastroEstudante(id: any): any {
+    // verificar se o usuario, realmente, deseja excluir o cadastro
+    if (confirm('Deseja, realmente, excluir este cadastro?')) {
+      // chamar a injeção de dependencia e acessar a requisição
+      this.estudApi.exclusaoRegistro(id).subscribe(() => {
+        this.roteador.navigate(['/listar'])
+      })
+    }
   }
 }

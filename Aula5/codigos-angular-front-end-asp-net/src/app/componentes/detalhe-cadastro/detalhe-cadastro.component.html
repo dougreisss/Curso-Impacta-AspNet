@@ -1,25 +1,61 @@
-<div class = "container">
-    <div class = "col-md-12">
+<div class="container">
+    <div class="col-md-12">
         <h3>{{ tituloComp }}</h3>
-        <table class = "table table-bordered">
-            <thead>
-                <tr>
-                    <th scope = "col">Id do Estudante</th>
-                    <th scope = "col">Nome</th>
-                    <th scope = "col">Idade</th>
-                    <th scope = "col">Genero</th>
-                    <th scope = "col">Cursando</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr scope = "row">
-                    <td>{{ cadastroUnico.id }}</td>
-                    <td>{{ cadastroUnico.nome }}</td>
-                    <td>{{ cadastroUnico.idade }}</td>
-                    <td>{{ cadastroUnico.genero }}</td>
-                    <td>{{ cadastroUnico.inscricaoCurso }}</td>
-                </tr>
-            </tbody>
-        </table>
+        <button class="btn btn-outline-primary btn-sm" routerLink="/listar">
+            Voltar
+        </button>
+        <div *ngIf="cadastroUnico != 0; else semDados">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Id do Estudante</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Sobrenome</th>
+                        <th scope="col">RA</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Idade</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Genero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr scope="row">
+                        <td>{{ cadastroUnico.estudante_Id }}</td>
+                        <td>{{ cadastroUnico.estudante_Nome }}</td>
+                        <td>{{ cadastroUnico.estudante_Sobrenome }}</td>
+                        <td>{{ cadastroUnico.estudante_RA }}</td>
+                        <td>{{ cadastroUnico.estudante_Email }}</td>
+                        <td>{{ cadastroUnico.estudante_Idade }}</td>
+                        <td>{{ cadastroUnico.estudante_Fone }}</td>
+                        <td>{{ cadastroUnico.estudante_Genero }}</td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm"
+                                routerLink="/atualizar/{{ cadastroUnico.estudante_Id }}">
+                                Atualizar
+                            </button>
+
+                            <button class="btn btn-outline-danger btn-sm"
+                                (click)="excluirCadastroEstudante(cadastroUnico.estudante_Id)">
+                                Excluir
+                            </button>
+
+                            <button class="btn btn-outline-success btn-sm" routerLink="/inserir">
+                                Inserir
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <ng-template #semDados>
+            <div class="text-center">
+                Nenhum registro foi encontrado. Crie um novo! Clique no botão abaixo...
+                <button class="btn btn-outline-primary" routerLink="/inserir">
+                    Criar Registro
+                </button>
+            </div>
+        </ng-template>
+
     </div>
 </div>
