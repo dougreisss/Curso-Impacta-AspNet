@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // importar o service
-import { EstudanteApiService } from '../../service/estudante-api.service';
+import { EstudanteApiService } from '../../../service/estudante-api.service';
 
 // importar o ActivatedRoute
 import { Router, ActivatedRoute } from '@angular/router';

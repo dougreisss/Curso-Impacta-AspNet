@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="col-md-12">
+        <h3>{{title}}</h3>
+        <button class="btn btn-outline-primary btn-sm" routerLink="/listar-curso">
+            Voltar
+        </button>
+
+        <div *ngIf="curso.curso_Id != 0; else semDados">
+            <table class="table"></table>
+        </div>
+
+        <ng-template #semDados>
+            <div class="text-center">
+                <p>Nenhum curso foi encontrado. Crie um novo! Clique no botão abaixo...</p>
+                <button class="btn btn-outline-primary">
+                    Criar um novo curso
+                </button>
+            </div>
+        </ng-template>
+
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="col-md-12">
+        <h3>{{title}}</h3>
+    </div>
+    <div *ngIf="listaCurso.length > 0; else vazioDeDados">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Id do curso</th>
+                    <th scope="col">Nome do curso</th>
+                    <th scope="col">Mensalidade do curso</th>
+                    <th scope="col">Estudante ID</th>
+                    <th scope="col">Estudante RA</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr scope="row" *ngFor="let curso of listaCurso">
+                    <td>{{curso.curso_Id}}</td>
+                    <td>{{curso.curso_Nome}}</td>
+                    <td>{{curso.curso_Mensalidade}}</td>
+                    <td>{{curso.estudante_Id}}</td>
+                    <td>{{curso.estudante_RA}}</td>
+                    <td>
+                        <button class="btn btn-outline-primary btn-sm">
+                            Atualizar
+                        </button>
+
+                        <button class="btn btn-outline-secondary btn-sm"
+                            routerLink="/detalhe-curso/{{ curso.curso_Id }}">
+                            Detalhes
+                        </button>
+
+                        <button class="btn btn-outline-danger btn-sm" (click)="excluirCurso(curso.curso_Id)">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <ng-template #vazioDeDados>
+        <div class="sem-dados">
+            <p>
+                Cursos não encontrados! Por favor, insira ao menos um.
+            </p>
+        </div>
+        <button class="btn btn-outline-primary">
+            Inserir Curso
+        </button>
+    </ng-template>
+
+</div>

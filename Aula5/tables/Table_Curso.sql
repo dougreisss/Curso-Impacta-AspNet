@@ -9,7 +9,7 @@ create table Curso
 	Curso_Mensalidade decimal(10,2),
 	Estudante_Id int, 
 	Estudante_RA int,
-	constraint pk_curso primary key (Estudante_Id),
+	constraint pk_curso primary key (Curso_Id),
 	constraint fk_curso_estudante foreign key (Estudante_Id)
 	references Estudante (Estudante_Id)
 )

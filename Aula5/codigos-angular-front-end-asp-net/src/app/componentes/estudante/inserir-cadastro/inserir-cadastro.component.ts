@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 // importar o service
-import { EstudanteApiService } from '../../service/estudante-api.service';
+import { EstudanteApiService } from '../../../service/estudante-api.service';
 // importar o Router
 import { Router } from '@angular/router';
 

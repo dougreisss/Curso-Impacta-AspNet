@@ -1,19 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 // importando os componentes
-import { InserirCadastroComponent } from './componentes/inserir-cadastro/inserir-cadastro.component';
-import { AtualizarCadastroComponent } from './componentes/atualizar-cadastro/atualizar-cadastro.component';
-import { ListarCadastrosComponent } from './componentes/listar-cadastros/listar-cadastros.component';
-import { DetalheCadastroComponent } from './componentes/detalhe-cadastro/detalhe-cadastro.component';
+import { InserirCadastroComponent } from './componentes/estudante/inserir-cadastro/inserir-cadastro.component';
+import { AtualizarCadastroComponent } from './componentes/estudante/atualizar-cadastro/atualizar-cadastro.component';
+import { ListarCadastrosComponent } from './componentes/estudante/listar-cadastros/listar-cadastros.component';
+import { DetalheCadastroComponent } from './componentes/estudante/detalhe-cadastro/detalhe-cadastro.component';
+import { ListarCursoComponent } from './componentes/curso/listar-curso/listar-curso.component';
+import { DetalheCursoComponent } from './componentes/curso/detalhe-curso/detalhe-curso.component';
 
 const routes: Routes = [
   // definir as rotas
-  //http://localhost:4200/listar
-  {path: '', redirectTo: 'listar', pathMatch: 'full'},
-  {path: 'inserir', component: InserirCadastroComponent},
-  {path: 'atualizar/:id', component: AtualizarCadastroComponent},
-  {path: 'listar', component: ListarCadastrosComponent},
-  {path: 'detalhe/:id', component: DetalheCadastroComponent}
+
+  { path: '', redirectTo: 'listar', pathMatch: 'full' },
+  { path: 'inserir', component: InserirCadastroComponent },
+  { path: 'atualizar/:id', component: AtualizarCadastroComponent },
+  { path: 'listar', component: ListarCadastrosComponent },
+  { path: 'detalhe/:id', component: DetalheCadastroComponent },
+  { path: 'listar-curso', component: ListarCursoComponent },
+  { path: 'detalhe-curso/:id', component: DetalheCursoComponent }
 ];
 
 @NgModule({
