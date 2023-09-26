@@ -12,5 +12,7 @@ namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers.Data.MeuDbContext
         }
 
         public DbSet<Estudante> Estudante { get; set; }
+        public DbSet<Curso> Curso { get; set; }
+ 
     }
 }
