@@ -17,6 +17,8 @@ import { ListarCadastrosComponent } from './componentes/estudante/listar-cadastr
 import { DetalheCadastroComponent } from './componentes/estudante/detalhe-cadastro/detalhe-cadastro.component';
 import { ListarCursoComponent } from './componentes/curso/listar-curso/listar-curso.component';
 import { DetalheCursoComponent } from './componentes/curso/detalhe-curso/detalhe-curso.component';
+import { InserirCursoComponent } from './componentes/curso/inserir-curso/inserir-curso.component';
+import { AtualizarCursoComponent } from './componentes/curso/atualizar-curso/atualizar-curso.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DetalheCursoComponent } from './componentes/curso/detalhe-curso/detalhe
     ListarCadastrosComponent,
     DetalheCadastroComponent,
     ListarCursoComponent,
-    DetalheCursoComponent
+    DetalheCursoComponent,
+    InserirCursoComponent,
+    AtualizarCursoComponent
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,8 @@
                     <td>{{curso.estudante_Id}}</td>
                     <td>{{curso.estudante_RA}}</td>
                     <td>
-                        <button class="btn btn-outline-primary btn-sm">
+                        <button class="btn btn-outline-primary btn-sm"
+                            routerLink="/atualizar-curso/{{ curso.curso_Id }}">
                             Atualizar
                         </button>
 
@@ -46,7 +47,7 @@
                 Cursos não encontrados! Por favor, insira ao menos um.
             </p>
         </div>
-        <button class="btn btn-outline-primary">
+        <button class="btn btn-outline-primary" routerLink="/inserir-curso">
             Inserir Curso
         </button>
     </ng-template>

@@ -41,5 +41,11 @@ export class DetalheCursoComponent implements OnInit {
     });
   }
 
+  excluirCurso(): void {
+    this.cursoService.exclusaoRegistro(this.rotaCopiada).subscribe(() => {
+      this.roteador.navigate(['/listar-curso']);
+    });
+  }
+
 
 }
