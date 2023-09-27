@@ -16,7 +16,7 @@ export class AtualizarCursoComponent implements OnInit {
     private copiandoRota: ActivatedRoute
   ) { }
 
-  title = "Atualizar cadastro"
+  title = "Atualizar Curso"
 
   rotaCopiada: any = this.copiandoRota.snapshot.params['id'];
 
@@ -31,6 +31,12 @@ export class AtualizarCursoComponent implements OnInit {
   ngOnInit(): void {
     this.cursoService.recUmRegistro(this.rotaCopiada).subscribe((dadosChegaram: Curso) => {
       this.atualizarCurso = dadosChegaram
+    });
+  }
+
+  updateCurso() {
+    this.cursoService.atualizarRegistro(this.rotaCopiada, this.atualizarCurso).subscribe(() => {
+      this.roteador.navigate(['/listar-curso'])
     });
   }
 

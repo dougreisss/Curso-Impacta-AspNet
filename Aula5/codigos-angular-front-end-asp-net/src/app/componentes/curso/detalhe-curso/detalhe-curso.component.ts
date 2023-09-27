@@ -32,7 +32,6 @@ export class DetalheCursoComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCurso();
-
   }
 
   getCurso(): void {

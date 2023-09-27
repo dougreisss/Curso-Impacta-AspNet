@@ -19,6 +19,7 @@ import { ListarCursoComponent } from './componentes/curso/listar-curso/listar-cu
 import { DetalheCursoComponent } from './componentes/curso/detalhe-curso/detalhe-curso.component';
 import { InserirCursoComponent } from './componentes/curso/inserir-curso/inserir-curso.component';
 import { AtualizarCursoComponent } from './componentes/curso/atualizar-curso/atualizar-curso.component';
+import { CursoApiService } from './service/curso-api.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { AtualizarCursoComponent } from './componentes/curso/atualizar-curso/atu
     FormsModule,
     HttpClientModule
   ],
-  providers: [EstudanteApiService],
+  providers: [EstudanteApiService, CursoApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

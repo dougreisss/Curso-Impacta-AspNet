@@ -31,4 +31,8 @@ export class InserirCursoComponent {
     });
   }
 
+  // validaCampos(): booelan {
+
+  // }
+
 }

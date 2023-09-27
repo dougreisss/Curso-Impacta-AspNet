@@ -19,7 +19,6 @@ export class ListarCursoComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarCursos();
-    console.log(this.listaCurso);
   }
 
   listarCursos(): void {
