@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="col-md-12">
+        <h3>{{ tituloComp }}</h3>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="dadosAtuaisEstudante.estudante_Nome" placeholder="Atualize o nome"
+                class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="dadosAtuaisEstudante.estudante_Sobrenome" placeholder="Atualize o sobrenome"
+                class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <input type="number" [(ngModel)]="dadosAtuaisEstudante.estudante_RA" placeholder="Atualize seu ra"
+                class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <input type="email" [(ngModel)]="dadosAtuaisEstudante.estudante_Email" placeholder="Atualize seu email"
+                class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <input type="number" [(ngModel)]="dadosAtuaisEstudante.estudante_Idade" placeholder="Atualize sua idade"
+                class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="dadosAtuaisEstudante.estudante_Fone" placeholder="Atualize seu telefone"
+                class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="dadosAtuaisEstudante.estudante_Genero"
+                placeholder="Atualize sua manifestação de gênero" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success btn-lg panel-body" (click)="atualizarDadosEstudante()">
+                Atualizar Registro
+            </button>
+        </div>
+    </div>
+</div>

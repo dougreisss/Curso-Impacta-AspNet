@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="col-md-12">
+        <h3>{{title}}</h3>
+
+        <div class="form-group">
+            <h5>Nome do curso</h5>
+            <input type="text" class="form-control" [(ngModel)]="atualizarCurso.curso_Nome" />
+        </div>
+
+        <div class="form-group">
+            <h5>Mensalidade do curso</h5>
+            <input type="number" class="form-control" [(ngModel)]="atualizarCurso.curso_Mensalidade">
+        </div>
+
+        <div class="form-group">
+            <h5>Id do estudante</h5>
+            <input type="number" class="form-control" [(ngModel)]="atualizarCurso.estudante_Id">
+        </div>
+
+        <div class="form-group">
+            <h5>RA do estudante</h5>
+            <input type="number" class="form-control" [(ngModel)]="atualizarCurso.estudante_RA">
+        </div>
+
+        <div class="form-group button-margin">
+            <button class="btn btn-success btn-lg panel-body" (click)="updateCurso()">
+                Atualizar Curso
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="col-md-12">
+        <h3>{{title}}</h3>
+        <div class="form-group">
+            <h5>Nome do Curso</h5>
+            <input type="text" class="form-control" placeholder="Informe o nome do curso"
+                [(ngModel)]="insertCurso.curso_Nome">
+        </div>
+        <div class="form-group">
+            <h5>Mensailidade do Curso</h5>
+            <input type="number" class="form-control" [(ngModel)]="insertCurso.curso_Mensalidade">
+        </div>
+        <div class="form-group">
+            <h5>Id do estudante</h5>
+            <input type="number" class="form-control" [(ngModel)]="insertCurso.estudante_Id">
+        </div>
+        <div class="form-group">
+            <h5>RA do estudante</h5>
+            <input type="number" class="form-control" [(ngModel)]="insertCurso.estudante_RA">
+        </div>
+        <div class="form-group button-margin">
+            <button class="btn btn-success btn-lg panel-body" (click)="inserirCurso()">
+                Inserir Curso
+            </button>
+        </div>
+    </div>
+</div>

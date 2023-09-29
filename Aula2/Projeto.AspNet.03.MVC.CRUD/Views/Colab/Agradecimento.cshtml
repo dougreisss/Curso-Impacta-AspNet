@@ -1,0 +1,15 @@
+﻿@*
+    estabelecer a "comunicacao" entre a view e o model
+*@
+
+@model Colab
+
+@{
+    ViewData["Title"] = "Registro inserido";
+}
+
+@* construir a estrutura HTML necessaria  *@
+
+<h2>@ViewData["Title"]</h2>
+
+<h2 class="h2">Bridagão, @Model.Nome, @Model.Departamento</h2>

@@ -1,0 +1,98 @@
+﻿@*
+
+*@
+
+@model Reserva
+
+@{
+    ViewData["Title"] = "Inserir Registros";
+}
+
+<a asp-action="Index" class="btn btn-sm btn-secondary">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+        <!--! Font Awesome Free 6.4.2 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <style>
+            svg {
+                fill: #ffffff
+            }</style>
+        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+    </svg>
+    Lista de dados</a>
+
+<h2>@ViewData["Title"]</h2>
+
+
+<form method="post" asp-action="AddReserva">
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input name="Nome" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="Sobrenome">Sobrenome</label>
+        <input name="Sobrenome" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="PontoA">Local de partida</label>
+        <input name="PontoA" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="PontoB">Local de chegada</label>
+        <input name="PontoB" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="Endereco">Endereço</label>
+        <input name="Endereco" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="CheckIn">CheckIn</label>
+        <input name="CheckIn" type="datetime-local" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="CheckOut">CheckOut</label>
+        <input name="CheckOut" type="datetime-local" class="form-control">
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-sm btn-primary">
+           @* <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                <!--! Font Awesome Free 6.4.2 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <style>
+                    svg {
+                        fill: #ffffff
+                    }</style>
+                <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+            </svg>*@
+            Inserir</button>
+    </div>
+</form>
+
+<h3>Reserva realizada</h3>
+
+@if (Model != null)
+{
+    <table class="table table-sm table-bordered m-2">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Local de partida</th>
+                <th>Local de chegada</th>
+                <th>Endereço</th>
+                <th>CheckIn</th>
+                <th>CheckOut</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Nome</td>
+                <td>@Model.Sobrenome</td>
+                <td>@Model.PontoA</td>
+                <td>@Model.PontoB</td>
+                <td>@Model.Endereco</td>
+                <td>@Model.CheckIn</td>
+                <td>@Model.CheckOut</td>
+            </tr>
+        </tbody>
+    </table>
+}

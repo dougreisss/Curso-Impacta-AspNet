@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Controllers\\Data",
+    "\\Controllers\\Data\\Entity",
+    "\\Controllers\\Data\\MeuDbContext"
+  ],
+  "SelectedNode": "\\Controllers\\EstudanteController.cs",
+  "PreviewInSolutionExplorer": false
+}

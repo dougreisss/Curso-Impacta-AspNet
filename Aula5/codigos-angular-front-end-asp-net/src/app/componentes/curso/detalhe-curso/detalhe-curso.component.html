@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="col-md-12">
+        <h3>{{title}}</h3>
+        <button class="btn btn-outline-primary btn-sm" routerLink="/listar-curso">
+            Voltar
+        </button>
+
+        <div *ngIf="curso.curso_Id != 0; else semDados">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id do curso</th>
+                        <th scope="col">Nome do curso</th>
+                        <th scope="col">Mensalidade do curso</th>
+                        <th scope="col">Id do estudante</th>
+                        <th scope="col">RA do estudante</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr scope="row">
+                        <td>{{curso.curso_Id}}</td>
+                        <td>{{curso.curso_Nome}}</td>
+                        <td>{{curso.curso_Mensalidade}}</td>
+                        <td>{{curso.estudante_Id}}</td>
+                        <td>{{curso.estudante_RA}}</td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm"
+                                routerLink="/atualizar-curso/{{curso.curso_Id}}">
+                                Atualizar
+                            </button>
+
+                            <button class="btn btn-outline-danger btn-sm margin-button" (click)="excluirCurso()">
+                                Excluir
+                            </button>
+
+                            <button class="btn btn-outline-success btn-sm" routerLink="/inserir-curso">
+                                Inserir
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <ng-template #semDados>
+            <div class="text-center">
+                <p>Nenhum curso foi encontrado. Crie um novo! Clique no botão abaixo...</p>
+                <button class="btn btn-outline-primary">
+                    Criar um novo curso
+                </button>
+            </div>
+        </ng-template>
+
+    </div>
+</div>
