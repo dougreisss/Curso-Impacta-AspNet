@@ -20,22 +20,22 @@
                 </thead>
                 <tbody>
                     <tr scope="row">
-                        <td>{{ cadastroUnico.estudante_Id }}</td>
-                        <td>{{ cadastroUnico.estudante_Nome }}</td>
-                        <td>{{ cadastroUnico.estudante_Sobrenome }}</td>
-                        <td>{{ cadastroUnico.estudante_RA }}</td>
-                        <td>{{ cadastroUnico.estudante_Email }}</td>
-                        <td>{{ cadastroUnico.estudante_Idade }}</td>
-                        <td>{{ cadastroUnico.estudante_Fone }}</td>
-                        <td>{{ cadastroUnico.estudante_Genero }}</td>
+                        <td>{{ cadastroUnico.estudanteId }}</td>
+                        <td>{{ cadastroUnico.estudanteNome }}</td>
+                        <td>{{ cadastroUnico.estudanteSobrenome }}</td>
+                        <td>{{ cadastroUnico.estudanteRA }}</td>
+                        <td>{{ cadastroUnico.estudanteEmail }}</td>
+                        <td>{{ cadastroUnico.estudanteIdade }}</td>
+                        <td>{{ cadastroUnico.estudanteFone }}</td>
+                        <td>{{ cadastroUnico.estudanteGenero }}</td>
                         <td>
                             <button class="btn btn-outline-primary btn-sm"
-                                routerLink="/atualizar/{{ cadastroUnico.estudante_Id }}">
+                                routerLink="/atualizar/{{ cadastroUnico.estudanteId }}">
                                 Atualizar
                             </button>
 
                             <button class="btn btn-outline-danger btn-sm"
-                                (click)="excluirCadastroEstudante(cadastroUnico.estudante_Id)">
+                                (click)="excluirCadastroEstudante(cadastroUnico.estudanteId)">
                                 Excluir
                             </button>
 

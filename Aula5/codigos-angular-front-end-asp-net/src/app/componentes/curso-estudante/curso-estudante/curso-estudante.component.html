@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="col-md-12">
+        <h3>{{ title }}</h3>
+        <div *ngIf="lstCursoEstudantes.length > 0; else vazioDeDados">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id Estudante</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Sobrenome</th>
+                        <th scope="col">RA</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Idade</th>
+                        <th scope="col">Fone</th>
+                        <th scope="col">Genero</th>
+                        <th scope="col">Id do curso</th>
+                        <th scope="col">Nome do curso</th>
+                        <th scope="col">Mensalidade do curso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr scope="row" *ngFor="let itens of lstCursoEstudantes">
+                        <td>{{ itens.estudante.estudanteId }}</td>
+                        <td>{{ itens.estudante.estudanteNome }}</td>
+                        <td>{{ itens.estudante.estudanteSobrenome }}</td>
+                        <td>{{ itens.estudante.estudanteRA}}</td>
+                        <td>{{ itens.estudante.estudanteEmail }}</td>
+                        <td>{{ itens.estudante.estudanteIdade }}</td>
+                        <td>{{ itens.estudante.estudanteFone }}</td>
+                        <td>{{ itens.estudante.estudanteGenero }}</td>
+                        <td>{{ itens.cursoId }}</td>
+                        <td>{{ itens.cursoNome }}</td>
+                        <td>{{ itens.cursoMensalidade }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <ng-template #vazioDeDados>
+        <div class="sem-dados">
+            <p>
+                Cadastros não encontrados! Por favor, insira ao menos um.
+            </p>
+        </div>
+        <button class="btn btn-outline-primary" routerLink="/inserir">
+            Inserir Cadastro
+        </button>
+    </ng-template>
+</div>

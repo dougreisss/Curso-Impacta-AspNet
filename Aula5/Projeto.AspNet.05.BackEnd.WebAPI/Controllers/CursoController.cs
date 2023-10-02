@@ -59,9 +59,9 @@ namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers
                 return NotFound();
             }
 
-            buscandoCurso.Curso_Nome = novoRegistro.Curso_Nome;
-            buscandoCurso.Curso_Mensalidade = novoRegistro.Curso_Mensalidade;
-            buscandoCurso.Estudante_RA = novoRegistro.Estudante_RA;
+            buscandoCurso.CursoNome = novoRegistro.CursoNome;
+            buscandoCurso.CursoMensalidade = novoRegistro.CursoMensalidade;
+            buscandoCurso.EstudanteRA = novoRegistro.EstudanteRA;
 
             await _dbContext.SaveChangesAsync();
 

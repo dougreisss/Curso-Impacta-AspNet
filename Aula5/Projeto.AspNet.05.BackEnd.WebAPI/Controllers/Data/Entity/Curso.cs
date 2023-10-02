@@ -10,11 +10,14 @@ namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers.Data.Entity
     public class Curso
     {
         [Key]
-        public int Curso_Id { get; set; }
-        public string? Curso_Nome { get; set; }
-        public decimal Curso_Mensalidade { get; set; }
-        [ForeignKey("Estudante_Id")]
-        public int Estudante_Id { get; set; }
-        public int Estudante_RA { get; set; }
+        public int CursoId { get; set; }
+        public string? CursoNome { get; set; }
+        public double CursoMensalidade { get; set; }
+        [ForeignKey("EstudanteId")]
+        public int EstudanteId { get; set; }
+        public int EstudanteRA { get; set; }
+        // indicar a exisitencia da relaçao entre entities Estudante e Curso da seguinte forma é necessario definiir,
+        // aqui uma prop que tem como data type a entity Estudante
+        public Estudante? Estudante { get; set; }
     }
 }

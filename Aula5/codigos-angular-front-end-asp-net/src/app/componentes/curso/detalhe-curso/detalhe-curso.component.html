@@ -5,7 +5,7 @@
             Voltar
         </button>
 
-        <div *ngIf="curso.curso_Id != 0; else semDados">
+        <div *ngIf="curso.cursoId != 0; else semDados">
             <table class="table">
                 <thead>
                     <tr>
@@ -19,14 +19,14 @@
                 </thead>
                 <tbody>
                     <tr scope="row">
-                        <td>{{curso.curso_Id}}</td>
-                        <td>{{curso.curso_Nome}}</td>
-                        <td>{{curso.curso_Mensalidade}}</td>
-                        <td>{{curso.estudante_Id}}</td>
-                        <td>{{curso.estudante_RA}}</td>
+                        <td>{{curso.cursoId}}</td>
+                        <td>{{curso.cursoNome}}</td>
+                        <td>{{curso.cursoMensalidade}}</td>
+                        <td>{{curso.estudanteId}}</td>
+                        <td>{{curso.estudanteRA}}</td>
                         <td>
                             <button class="btn btn-outline-primary btn-sm"
-                                routerLink="/atualizar-curso/{{curso.curso_Id}}">
+                                routerLink="/atualizar-curso/{{curso.cursoId}}">
                                 Atualizar
                             </button>
 

@@ -15,13 +15,13 @@ export class InserirCadastroComponent {
 
   // 2º passo: definir um objeto literal para receber os dados que virão da view
   @Input() cadastroInserido = {
-    estudante_nome: '',
-    estudante_sobrenome: '',
-    estudante_ra: 0,
-    estudante_email: '',
-    estudante_idade: 0,
-    estudante_fone: '',
-    estudante_genero: '',
+    estudanteNome: '',
+    estudanteSobrenome: '',
+    estudanteRa: 0,
+    estudanteEmail: '',
+    estudanteIdade: 0,
+    estudanteFone: '',
+    estudanteGenero: '',
   }
 
   // 3º passo: definir as referencias de instancia das classes EstudanteApiService e Router

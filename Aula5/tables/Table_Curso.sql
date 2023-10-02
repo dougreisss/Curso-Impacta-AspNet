@@ -4,13 +4,13 @@ drop table if exists Curso
 
 create table Curso
 (
-	Curso_Id int identity(1,1), 
-	Curso_Nome varchar(100),
-	Curso_Mensalidade decimal(10,2),
-	Estudante_Id int, 
-	Estudante_RA int,
-	constraint pk_curso primary key (Curso_Id),
-	constraint fk_curso_estudante foreign key (Estudante_Id)
-	references Estudante (Estudante_Id)
+	CursoId int identity(1,1), 
+	CursoNome varchar(100),
+	CursoMensalidade float,
+	EstudanteId int, 
+	EstudanteRA int,
+	constraint pk_curso primary key (CursoId),
+	constraint fk_curso_estudante foreign key (EstudanteId)
+	references Estudante (EstudanteId)
 )
 

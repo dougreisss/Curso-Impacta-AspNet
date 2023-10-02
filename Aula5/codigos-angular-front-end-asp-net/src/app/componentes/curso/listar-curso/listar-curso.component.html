@@ -16,23 +16,23 @@
             </thead>
             <tbody>
                 <tr scope="row" *ngFor="let curso of listaCurso">
-                    <td>{{curso.curso_Id}}</td>
-                    <td>{{curso.curso_Nome}}</td>
-                    <td>{{curso.curso_Mensalidade}}</td>
-                    <td>{{curso.estudante_Id}}</td>
-                    <td>{{curso.estudante_RA}}</td>
+                    <td>{{curso.cursoId}}</td>
+                    <td>{{curso.cursoNome}}</td>
+                    <td>{{curso.cursoMensalidade}}</td>
+                    <td>{{curso.estudanteId}}</td>
+                    <td>{{curso.estudanteRA}}</td>
                     <td>
                         <button class="btn btn-outline-primary btn-sm"
-                            routerLink="/atualizar-curso/{{ curso.curso_Id }}">
+                            routerLink="/atualizar-curso/{{ curso.cursoId }}">
                             Atualizar
                         </button>
 
                         <button class="btn btn-outline-secondary btn-sm margin-button"
-                            routerLink="/detalhe-curso/{{ curso.curso_Id }}">
+                            routerLink="/detalhe-curso/{{ curso.cursoId }}">
                             Detalhes
                         </button>
 
-                        <button class="btn btn-outline-danger btn-sm" (click)="excluirCurso(curso.curso_Id)">
+                        <button class="btn btn-outline-danger btn-sm" (click)="excluirCurso(curso.cursoId)">
                             Excluir
                         </button>
                     </td>

@@ -19,27 +19,27 @@
                 </thead>
                 <tbody>
                     <tr scope="row" *ngFor="let itens of listaDeEstudantes">
-                        <td>{{ itens.estudante_Id }}</td>
-                        <td>{{ itens.estudante_Nome }}</td>
-                        <td>{{ itens.estudante_Sobrenome }}</td>
-                        <td>{{ itens.estudante_RA}}</td>
-                        <td>{{ itens.estudante_Email }}</td>
-                        <td>{{ itens.estudante_Idade }}</td>
-                        <td>{{ itens.estudante_Fone }}</td>
-                        <td>{{ itens.estudante_Genero }}</td>
+                        <td>{{ itens.estudanteId }}</td>
+                        <td>{{ itens.estudanteNome }}</td>
+                        <td>{{ itens.estudanteSobrenome }}</td>
+                        <td>{{ itens.estudanteRA}}</td>
+                        <td>{{ itens.estudanteEmail }}</td>
+                        <td>{{ itens.estudanteIdade }}</td>
+                        <td>{{ itens.estudanteFone }}</td>
+                        <td>{{ itens.estudanteGenero }}</td>
                         <td>
                             <button class="btn btn-outline-primary btn-sm"
-                                routerLink="/atualizar/{{ itens.estudante_Id }}">
+                                routerLink="/atualizar/{{ itens.estudanteId }}">
                                 Atualizar
                             </button>
 
                             <button class="btn btn-outline-secondary btn-sm"
-                                routerLink="/detalhe/{{ itens.estudante_Id }}">
+                                routerLink="/detalhe/{{ itens.estudanteId }}">
                                 Detalhes
                             </button>
 
                             <button class="btn btn-outline-danger btn-sm"
-                                (click)="excluirCadastroEstudante(itens.estudante_Id)">
+                                (click)="excluirCadastroEstudante(itens.estudanteId)">
                                 Excluir
                             </button>
                         </td>

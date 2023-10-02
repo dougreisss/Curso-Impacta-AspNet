@@ -61,19 +61,19 @@ namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers
                 return NotFound();
             }
 
-            buscandoEstudante.Estudante_Nome = novoRegistro.Estudante_Nome;
+            buscandoEstudante.EstudanteNome = novoRegistro.EstudanteNome;
 
-            buscandoEstudante.Estudante_Sobrenome = novoRegistro.Estudante_Sobrenome;
+            buscandoEstudante.EstudanteSobrenome = novoRegistro.EstudanteSobrenome;
 
-            buscandoEstudante.Estudante_RA = novoRegistro.Estudante_RA;
+            buscandoEstudante.EstudanteRA = novoRegistro.EstudanteRA;
 
-            buscandoEstudante.Estudante_Email = novoRegistro.Estudante_Email;
+            buscandoEstudante.EstudanteEmail = novoRegistro.EstudanteEmail;
 
-            buscandoEstudante.Estudante_Idade = novoRegistro.Estudante_Idade;
+            buscandoEstudante.EstudanteIdade = novoRegistro.EstudanteIdade;
 
-            buscandoEstudante.Estudante_Fone = novoRegistro.Estudante_Fone;
+            buscandoEstudante.EstudanteFone = novoRegistro.EstudanteFone;
 
-            buscandoEstudante.Estudante_Genero = novoRegistro.Estudante_Genero;
+            buscandoEstudante.EstudanteGenero = novoRegistro.EstudanteGenero;
 
             await _dbContext.SaveChangesAsync();
 

@@ -21,11 +21,11 @@ export class AtualizarCursoComponent implements OnInit {
   rotaCopiada: any = this.copiandoRota.snapshot.params['id'];
 
   atualizarCurso: Curso = {
-    curso_Id: 0,
-    curso_Nome: '',
-    curso_Mensalidade: 0,
-    estudante_Id: 0,
-    estudante_RA: 0
+    cursoId: 0,
+    cursoNome: '',
+    cursoMensalidade: 0,
+    estudanteId: 0,
+    estudanteRA: 0
   }
 
   ngOnInit(): void {

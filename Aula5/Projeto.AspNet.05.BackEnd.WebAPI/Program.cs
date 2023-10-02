@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Projeto.AspNet._05.BackEnd.WebAPI.Controllers.Data.MeuDbContext;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,11 @@ builder.Services.AddDbContext<MeuDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 });
+
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(
+    options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddCors(options =>
 {
