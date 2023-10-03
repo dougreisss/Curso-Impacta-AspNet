@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Projeto.AspNet._05.BackEnd.WebAPI.Controllers.Data.Entity;
 using Projeto.AspNet._05.BackEnd.WebAPI.Controllers.Data.MeuDbContext;
 
 namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers
@@ -34,6 +35,16 @@ namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers
                 cs => cs.CursoNome.Contains(termo)).Include(t => t.Estudante).ToListAsync();
 
             return Ok(resultadoFiltrado);
+        }
+
+        [HttpGet]
+        [Route("GetJoinTodosOsEstudantes")]
+        public async Task<ActionResult<IEnumerable<Estudante>>> GetEstudantesComCursos()
+        {
+            var estudantesComCursos = await _meuDbContext.Estudante
+                .Include(e => e.Curso).ToListAsync();
+
+            return Ok(estudantesComCursos);
         }
     }
 }

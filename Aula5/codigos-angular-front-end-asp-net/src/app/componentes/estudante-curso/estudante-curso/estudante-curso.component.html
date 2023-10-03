@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="col-md-12">
+        <h3>{{ title }}</h3>
+        <div *ngIf="lstEstudanteCurso.length > 0; else vazioDeDados">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id Estudante</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Sobrenome</th>
+                        <th scope="col">RA</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Idade</th>
+                        <th scope="col">Fone</th>
+                        <th scope="col">Genero</th>
+                        <th scope="col">Id do curso</th>
+                        <th scope="col">Nome do curso</th>
+                        <th scope="col">Mensalidade do curso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let estudante of lstEstudanteCurso">
+                        <td>{{ estudante.estudanteId }}</td>
+                        <td>{{ estudante.estudanteNome }}</td>
+                        <td>{{ estudante.estudanteSobrenome }}</td>
+                        <td>{{ estudante.estudanteRA }}</td>
+                        <td>{{ estudante.estudanteEmail }}</td>
+                        <td>{{ estudante.estudanteIdade }}</td>
+                        <td>{{ estudante.estudanteFone }}</td>
+                        <td>{{ estudante.estudanteGenero }}</td>
+                        <td>
+                            <p *ngFor="let curso of estudante.curso">
+                                {{ curso.cursoId }}
+                            </p>
+                        </td>
+                        <td>
+                            <p *ngFor="let curso of estudante.curso">
+                                {{ curso.cursoNome }}
+                            </p>
+                        </td>
+                        <td>
+                            <p *ngFor="let curso of estudante.curso">
+                                {{ curso.cursoMensalidade }}
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <ng-template #vazioDeDados>
+        <div class="sem-dados">
+            <p>
+                Cadastros não encontrados! Por favor, insira ao menos um.
+            </p>
+        </div>
+        <button class="btn btn-outline-primary" routerLink="/inserir">
+            Inserir Cadastro
+        </button>
+    </ng-template>
+</div>
