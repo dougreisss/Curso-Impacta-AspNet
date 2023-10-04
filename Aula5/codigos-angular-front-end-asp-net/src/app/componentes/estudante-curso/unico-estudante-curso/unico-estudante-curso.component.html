@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-md-12">
         <h3>{{ title }}</h3>
-        <div *ngIf="lstEstudanteCurso.length > 0; else vazioDeDados">
+        <div *ngIf="unicoEstudante != 0; else vazioDeDados">
             <table class="table">
                 <thead>
                     <tr>
@@ -16,37 +16,32 @@
                         <th scope="col">Id do curso</th>
                         <th scope="col">Nome do curso</th>
                         <th scope="col">Mensalidade do curso</th>
-                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let estudante of lstEstudanteCurso">
-                        <td>{{ estudante.estudanteId }}</td>
-                        <td>{{ estudante.estudanteNome }}</td>
-                        <td>{{ estudante.estudanteSobrenome }}</td>
-                        <td>{{ estudante.estudanteRA }}</td>
-                        <td>{{ estudante.estudanteEmail }}</td>
-                        <td>{{ estudante.estudanteIdade }}</td>
-                        <td>{{ estudante.estudanteFone }}</td>
-                        <td>{{ estudante.estudanteGenero }}</td>
+                    <tr>
+                        <td>{{ unicoEstudante.estudanteId }}</td>
+                        <td>{{ unicoEstudante.estudanteNome }}</td>
+                        <td>{{ unicoEstudante.estudanteSobrenome }}</td>
+                        <td>{{ unicoEstudante.estudanteRA }}</td>
+                        <td>{{ unicoEstudante.estudanteEmail }}</td>
+                        <td>{{ unicoEstudante.estudanteIdade }}</td>
+                        <td>{{ unicoEstudante.estudanteFone }}</td>
+                        <td>{{ unicoEstudante.estudanteGenero }}</td>
                         <td>
-                            <p *ngFor="let curso of estudante.curso">
+                            <p *ngFor="let curso of unicoEstudante.curso">
                                 {{ curso.cursoId }}
                             </p>
                         </td>
                         <td>
-                            <p *ngFor="let curso of estudante.curso">
+                            <p *ngFor="let curso of unicoEstudante.curso">
                                 {{ curso.cursoNome }}
                             </p>
                         </td>
                         <td>
-                            <p *ngFor="let curso of estudante.curso">
+                            <p *ngFor="let curso of unicoEstudante.curso">
                                 {{ curso.cursoMensalidade }}
                             </p>
-                        </td>
-                        <td>
-                            <button class="btn btn-outline-secondary btn-sm margin-button"
-                                routerLink="/unico-estudante-curso/{{estudante.estudanteId}}">Detalhes</button>
                         </td>
                     </tr>
                 </tbody>

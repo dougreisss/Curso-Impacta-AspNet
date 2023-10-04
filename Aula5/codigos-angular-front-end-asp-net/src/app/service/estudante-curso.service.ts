@@ -24,6 +24,13 @@ export class EstudanteCursoService {
     )
   }
 
+  getUnicoEstudanteCurso(idEstudante: number): Observable<any> {
+    return this.httpReq.get<any>(this.apiUrlBase + 'GetJoinUnicoEstudante/' + idEstudante).pipe(
+      retry(1),
+      catchError(this.observarBug)
+    )
+  }
+
   observarBug(bug: any) {
     let infosBug: any = ''
 

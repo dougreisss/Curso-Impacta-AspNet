@@ -11,6 +11,7 @@ import { InserirCursoComponent } from './componentes/curso/inserir-curso/inserir
 import { AtualizarCursoComponent } from './componentes/curso/atualizar-curso/atualizar-curso.component';
 import { CursoEstudanteComponent } from './componentes/curso-estudante/curso-estudante/curso-estudante.component';
 import { EstudanteCursoComponent } from './componentes/estudante-curso/estudante-curso/estudante-curso.component';
+import { UnicoEstudanteCursoComponent } from './componentes/estudante-curso/unico-estudante-curso/unico-estudante-curso.component';
 
 const routes: Routes = [
   // definir as rotas
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'inserir-curso', component: InserirCursoComponent },
   { path: 'atualizar-curso/:id', component: AtualizarCursoComponent },
   { path: 'curso-estudante', component: CursoEstudanteComponent },
-  { path: 'estudante-curso', component: EstudanteCursoComponent }
+  { path: 'estudante-curso', component: EstudanteCursoComponent },
+  { path: 'unico-estudante-curso/:id', component: UnicoEstudanteCursoComponent }
 ];
 
 @NgModule({

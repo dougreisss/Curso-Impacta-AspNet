@@ -46,5 +46,16 @@ namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers
 
             return Ok(estudantesComCursos);
         }
+
+        [HttpGet]
+        [Route("GetJoinUnicoEstudante/{estudanteId}")]
+        public async Task<ActionResult> GetJoinUnicoEstudante(int estudanteId)
+        {
+            var unicoEstudante = _meuDbContext.Estudante
+                .Include(e => e.Curso)
+                .Where(e => e.EstudanteId == estudanteId).First();
+
+            return Ok(unicoEstudante);
+        }
     }
 }

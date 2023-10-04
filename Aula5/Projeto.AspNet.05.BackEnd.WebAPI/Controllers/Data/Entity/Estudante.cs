@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Projeto.AspNet._05.BackEnd.WebAPI.Controllers.Data.Entity
 {
